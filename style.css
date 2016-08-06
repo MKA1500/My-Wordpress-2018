@@ -23,7 +23,7 @@ font-size: 1.3rem;
 
 .site-header {
    border-bottom: 1px solid #D6D6D6;
-   padding-bottom: 20px;
+   padding-bottom: 0px;
    margin-bottom: 20px;
 }
 
@@ -44,4 +44,47 @@ a:visited  {
 .site-footer {
    border-top: 1px solid #D6D6D6; 
    padding: 20px 0px 20px 0px;
+}
+
+/* Navigation menus */
+
+.site-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
+
+.site-nav ul:after { clear: both; }
+
+.site-nav ul { *zoom: 1; }
+
+.site-nav ul li {
+	list-style: none;
+	float: left;
+}
+
+/* Header menu */
+
+.site-header nav ul li {
+	margin-right: 5px;
+}
+
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited {
+	display: block;
+	padding: 10px 18px;
+	border: 1px solid #BBB;
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+	background-color: #ECECEC;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited {
+	background-color: #006EC3;
+	color: #FFF;
 }
