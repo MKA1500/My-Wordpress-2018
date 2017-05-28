@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-  <head>
+<head>
     <meta charset="<?php bloginfo('charet'); ?>">
-	<meta name="viewport" content="width=device-width" />
-	<title><?php bloginfo('name'); ?></title>
+    <meta name="viewport" content="width=device-width"/>
+    <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
-  </head>
-  
+</head>
+
 <body <?php body_class(); ?>>
 
 <div class="wrapper">
+    <header class="siteHeader">
+        <div class="navWrap">
+            <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h5><?php bloginfo('description'); ?></h5>
 
-<header class="site-header">
-<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-<h5><?php bloginfo('description'); ?></h5>
-
-    <nav class="site-nav">
-	    <?php
-		    $args = array(
-			    'theme_location' => 'primary'			
-			);
-		?>
-	    <?php wp_nav_menu($args); ?>
-	</nav>
-
-</header>
+            <nav class="siteNav">
+                <?php
+                $args = array(
+                    'theme_location' => 'primary'
+                );
+                ?>
+                <?php wp_nav_menu($args); ?>
+            </nav>
+        </div>
+    </header>
 

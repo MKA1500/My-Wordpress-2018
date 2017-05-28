@@ -1,23 +1,28 @@
 <?php
 
 get_header();
+?>
+    <main class="mainWrapper">
+        <?php
+        if (have_posts()) :
+            while (have_posts()) : the_post(); ?>
 
-if (have_posts()) :
-   while (have_posts()) : the_post(); ?>
-  
- <div class="post">  
-   <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
- 
-     <a href="<?php the_permalink(); ?>"><?php the_content(); ?></a>
-   </div>
+                <div class="post">
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-   <?php endwhile;
+                    <a href="<?php the_permalink(); ?>"><?php the_content(); ?></a>
+                </div>
 
-   else: 
-      echo '<p>No content found</p>';
+            <?php endwhile;
 
-   endif;
-   
+        else:
+            echo '<p>No content found</p>';
+
+        endif;
+
+        ?>
+    </main>
+<?php
 get_footer();
 
 ?>
