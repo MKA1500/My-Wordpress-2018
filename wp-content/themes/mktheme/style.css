@@ -66,10 +66,11 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
-	margin: 0;
-	background: #777;
-}
+ body {
+   color: red;
+   background: #eee;
+
+ }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and

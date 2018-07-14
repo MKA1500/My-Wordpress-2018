@@ -12,3 +12,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 */
 
 @import "bootstrap/bootstrap";
+
+body {
+  background: #eee;
+  h1, h2, h3, p, a {
+    color: #000!important;
+  }
+}
