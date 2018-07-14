@@ -5,6 +5,8 @@ get_header();
 <div id="primary" class="blog-content">
     <main id="main">
         <div class="container homepage-posts">
+          <h1>Strona główna</h1>
+          <button class="btn btn-primary">Hello</button>
             <div class="row">
                 <?php
               		$args = array(
