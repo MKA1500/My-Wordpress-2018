@@ -6,14 +6,13 @@ get_header();
     <main id="main">
         <div class="container homepage-posts">
           <h1>Strona główna</h1>
-          <button class="btn btn-primary">Hello</button>
             <div class="row">
                 <?php
               		$args = array(
               			'post_type' => 'post',
               			'post_status' => 'publish',
               			'category_name' => 'Blog',
-              			'posts_per_page' => 6
+              			'posts_per_page' => 4
               		);
               		$arr_posts = new WP_Query( $args );
 
@@ -22,7 +21,7 @@ get_header();
               			while ( $arr_posts->have_posts() ) :
               				$arr_posts->the_post();
         				?>
-        				<article id="post-<?php the_ID(); ?>" class="col-md-6 col-lg-4">
+        				<article id="post-<?php the_ID(); ?>" class="col-md-6">
                             <a href="<?php echo get_permalink( $post->ID ); ?>">
                                 <div class="frontpage-thumbnail">
                                     <?php

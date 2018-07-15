@@ -1,0 +1,29 @@
+$textColor: #333;
+$primaryColor: #2562c4;
+$primaryHover: #1b4a96;
+
+@mixin max-1366 {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin max-1199 {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin max-991 {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin max-767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin max-574 {
+  @media (max-width: 574px) {
+    @content;
+  }
+}

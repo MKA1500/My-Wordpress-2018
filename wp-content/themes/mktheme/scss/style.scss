@@ -12,22 +12,5 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 */
 
 @import "bootstrap/bootstrap";
-
-body {
-  h1, h2 {
-    color: tomato!important;
-    font-size: 2.9rem;
-  }
-  a {
-    color: #000;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  button {
-    color: #eee;
-    background-color: tomato;
-    border: none;
-    border-radius: 0.5rem;
-  }
-}
+@import "variables";
+@import "general";

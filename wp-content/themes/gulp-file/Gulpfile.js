@@ -24,5 +24,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('default', function () {
-  gulp.watch('../mktheme/scss/style.scss', ['sass']);
+  gulp.watch('../mktheme/scss/**/*.scss', ['sass']);
 });
