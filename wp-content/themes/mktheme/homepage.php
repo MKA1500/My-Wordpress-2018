@@ -4,7 +4,7 @@ get_header();
 ?>
 <div id="primary" class="blog-content">
     <main id="main">
-        <div class="container homepage-posts">
+        <div class="container posts-index">
           <h1>Strona główna</h1>
             <div class="row">
                 <?php
@@ -12,7 +12,7 @@ get_header();
               			'post_type' => 'post',
               			'post_status' => 'publish',
               			'category_name' => 'Blog',
-              			'posts_per_page' => 4
+              			'posts_per_page' => 7
               		);
               		$arr_posts = new WP_Query( $args );
 
