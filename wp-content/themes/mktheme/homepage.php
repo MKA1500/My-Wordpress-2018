@@ -21,22 +21,22 @@ get_header();
               			while ( $arr_posts->have_posts() ) :
               				$arr_posts->the_post();
         				?>
-        				<article id="post-<?php the_ID(); ?>" class="col-md-6">
-                            <a href="<?php echo get_permalink( $post->ID ); ?>">
-                                <div class="frontpage-thumbnail">
-                                    <?php
-                					if ( has_post_thumbnail() ) :
-                						the_post_thumbnail();
-                					endif;
-                					?>
-                                </div>
-            					<header class="entry-header">
-            						<h1 class="entry-title"><?php the_title(); ?></h1>
-            					</header>
-            					<div class="entry-content">
-            						<?php the_excerpt(); ?>
-            					</div>
-                            </a>
+        				<article id="post-<?php the_ID(); ?>" class="col-md-6 col-lg-4">
+                  <a href="<?php echo get_permalink( $post->ID ); ?>">
+                    <div class="frontpage-thumbnail">
+                      <?php
+                      if ( has_post_thumbnail() ) :
+                      the_post_thumbnail();
+                      endif;
+                      ?>
+                    </div>
+                    <header class="entry-header">
+                    <h2 class="entry-title"><?php the_title(); ?></h2>
+                    </header>
+                    <div class="entry-content">
+                    <?php the_excerpt(); ?>
+                    </div>
+                  </a>
         				</article>
         				<?php
         			endwhile;
