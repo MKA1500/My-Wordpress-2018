@@ -119,6 +119,19 @@ add_action( 'widgets_init', 'mktheme_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+ function get_excerpt() {
+	 	// $excerpt = preg_replace(" ([.*?])",'',$excerpt);
+		// $excerpt = strip_shortcodes($excerpt);
+		// $excerpt = strip_tags($excerpt);
+		$excerpt = the_excerpt();
+		$excerpt = substr($excerpt,0, 20);
+		// $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+		// $excerpt = trim(preg_replace( '/s+/', ' ', $excerpt));
+		// $excerpt = $excerpt.'... <a href="'.$permalink.'">more</a>';
+	 return $excerpt;
+ }
+
 function mktheme_scripts() {
 	wp_enqueue_style( 'mktheme-style', get_stylesheet_uri() );
 
@@ -158,4 +171,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
