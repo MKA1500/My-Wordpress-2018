@@ -34,7 +34,7 @@ get_header();
                     <h2 class="entry-title"><?php the_title(); ?></h2>
                     </header>
                     <div class="entry-content">
-                    <?php get_excerpt(); ?>
+                    <?php echo substr(the_excerpt(),0, 10); ?>
                     </div>
                   </a>
         				</article>
