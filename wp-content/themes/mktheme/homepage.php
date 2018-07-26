@@ -6,12 +6,12 @@ get_header();
     <main id="main">
         <div class="container posts-index">
             <div class="row">
-              <div class="about-author">
+              <div class="about-author col-4">
                 <div class="author-img-wrap">
                   <img src="wp-content/uploads/2018/07/export.png" Alt="Author" />
                 </div>
                 <h2>Martin Keppler</h2>
-                <p>Blog on private banking and finances</p>
+                <p>Blog on private banking, finances and fitness, yo</p>
               </div>
                 <?php
                   $counter = 1;
@@ -37,11 +37,13 @@ get_header();
                       endif;
                       ?>
                     </div>
-                    <header class="entry-header">
-                    <h2 class="entry-title"><?php the_title(); ?></h2>
-                    </header>
-                    <div class="entry-content">
-                    <?php echo substr(the_excerpt(),0, 10); ?>
+                    <div class="index-text">
+                      <header class="entry-header">
+                      <h2 class="entry-title"><?php the_title(); ?></h2>
+                      </header>
+                      <div class="entry-content">
+                      <?php echo substr(the_excerpt(),0, 10); ?>
+                      </div>
                     </div>
                   </a>
         				</article>
