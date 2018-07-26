@@ -6,7 +6,15 @@ get_header();
     <main id="main">
         <div class="container posts-index">
             <div class="row">
+              <div class="about-author">
+                <div class="author-img-wrap">
+                  <img src="wp-content/uploads/2018/07/export.png" Alt="Author" />
+                </div>
+                <h2>Martin Keppler</h2>
+                <p>Blog on private banking and finances</p>
+              </div>
                 <?php
+                  $counter = 1;
               		$args = array(
               			'post_type' => 'post',
               			'post_status' => 'publish',
@@ -20,7 +28,7 @@ get_header();
               			while ( $arr_posts->have_posts() ) :
               				$arr_posts->the_post();
         				?>
-        				<article id="post-<?php the_ID(); ?>" class="col-md-6 col-lg-4">
+        				<article id="post-<?php the_ID(); ?>" class="col-md-6 col-lg-4 post_<?php echo $counter; ?>">
                   <a href="<?php echo get_permalink( $post->ID ); ?>">
                     <div class="frontpage-thumbnail">
                       <?php
@@ -38,6 +46,7 @@ get_header();
                   </a>
         				</article>
         				<?php
+                $counter++;
         			endwhile;
         		endif;
         		?>

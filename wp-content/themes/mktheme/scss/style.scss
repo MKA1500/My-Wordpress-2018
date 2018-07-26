@@ -9,10 +9,11 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: mktheme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-*/
+// */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
 @import "bootstrap/bootstrap";
 @import "variables";
 @import "general";
 @import "header";
 @import "posts-index";
+@import "single";
