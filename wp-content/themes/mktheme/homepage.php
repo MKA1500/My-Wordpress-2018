@@ -5,7 +5,6 @@ get_header();
 <div id="primary" class="blog-content">
     <main id="main">
         <div class="container posts-index">
-          <h1>Strona główna</h1>
             <div class="row">
                 <?php
               		$args = array(
