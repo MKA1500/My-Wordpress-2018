@@ -4,7 +4,7 @@
     .about-author {
       order: 2;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       margin-bottom: 2rem;
@@ -28,6 +28,11 @@
           height: auto;
           left: 39%;
         }
+      }
+      @include max-1199 {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 1rem;
       }
     }
     article {
@@ -60,12 +65,9 @@
       }
       &.post_1 {
         order: 1;
-        flex: 0 0 66.66666%;
-        max-width: 66.66666%;
         position: relative;
-        height: 21rem;
+        height: 50vh;
         margin-bottom: 2rem;
-        margin-top: 1rem;
         .frontpage-thumbnail {
           height: 100%;
           width: 100%;
@@ -89,6 +91,9 @@
           &:hover {
             background: rgba(0,0,0,0.4);
           }
+        }
+        @include max-1199 {
+          margin-bottom: 1rem;
         }
       }
       &.post_2 {
