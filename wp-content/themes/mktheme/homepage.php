@@ -6,11 +6,11 @@ get_header();
     <main id="main">
         <div class="container posts-index">
             <div class="row">
-              <div class="about-author col-lg-4">
+              <div class="about-author col-xl-4">
                 <div class="author-img-wrap">
-                  <img src="wp-content/uploads/2018/07/export.png" Alt="Author" />
+                  <img src="wp-content/uploads/2018/08/aia.jpg" Alt="Author" />
                 </div>
-                <h2>Martin Keppler</h2>
+                <h3>Martin Keppler</h3>
                 <p>Blog on private banking, finances and fitness, yo</p>
               </div>
                 <?php
@@ -19,7 +19,7 @@ get_header();
               			'post_type' => 'post',
               			'post_status' => 'publish',
               			'category_name' => 'Blog',
-              			'posts_per_page' => 7
+              			'posts_per_page' => 5
               		);
               		$arr_posts = new WP_Query( $args );
 
@@ -28,11 +28,10 @@ get_header();
               			while ( $arr_posts->have_posts() ) :
               				$arr_posts->the_post();
         				?>
-        				<article id="post-<?php the_ID(); ?>" class="col-lg-8 post_<?php echo $counter; ?>">
+        				<article id="post-<?php the_ID(); ?>" class="col-xl-8 post_<?php echo $counter; ?>">
                   <a href="<?php echo get_permalink( $post->ID ); ?>">
                     <div class="frontpage-thumbnail">
                       <?php
-                      var_dump($post);
                       if ( has_post_thumbnail() ) :
                       the_post_thumbnail();
                       endif;
