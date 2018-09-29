@@ -42,7 +42,10 @@ get_header();
                       <h2 class="entry-title"><?php the_title(); ?></h2>
                       </header>
                       <div class="entry-content">
-                      <?php echo substr(the_excerpt(),0, 10); ?>
+                        <p>
+                          <?php echo get_the_excerpt(); ?>
+                          <strong>Czytaj więcej &raquo</strong>
+                        </p>
                       </div>
                     </div>
                   </a>
